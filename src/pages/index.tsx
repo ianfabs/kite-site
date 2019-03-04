@@ -10,6 +10,9 @@ import {
   Header,
   Icon,
 } from "semantic-ui-react";
+import elementLogo from "../css/images/element.svg";
+
+const StackImage = (props:any) => <img src={props.src} alt={props.alt} width="auto" height="50vh" style={{margin: "13px 10px"}}/>
 
 const IndexPage = (props: LayoutProps) =>
   <div>
@@ -19,9 +22,9 @@ const IndexPage = (props: LayoutProps) =>
         Link={Link} pathname={props.location.pathname} items={menuItems} inverted
       />
       <Container text>
-        <Header inverted as="h1">Gatsby 2.0 - Starter kit</Header>
-        <Header inverted as="h2">Typescript - Jest - Semantic UI</Header>
-        <Button primary size="huge">Get started!</Button>
+        <Header inverted as="h1">Kite</Header>
+        <Header inverted as="h2">Developed with the needs of eduational institutions in mind</Header>
+        <Button primary size="huge" onClick={()=>{window.open("https://github.com/kari-labs/kite")}}>Get Started</Button>
       </Container>
     </Segment>
 
@@ -30,29 +33,23 @@ const IndexPage = (props: LayoutProps) =>
       <Grid stackable verticalAlign="middle" className="container">
         <Grid.Row>
           <Grid.Column width="8">
-            <Header>Lorem ipsum</Header>
+            <Header>Institutional Awareness</Header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
-            <Header>Dolor sit amet</Header>
+              Kite was developed with the needs of educational institutions in mind, providing features like: integration with
+              existing authentication systems, administrative management features, and integration with version-control systems.
+            </p>
+            <Header>Future-Forward</Header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
+              Kite was designed with a next-gen technology stack, affording your instution the latest and greatest the tech world has to offer.
+            </p>
           </Grid.Column>
           <Grid.Column width="6" floated="right">
-            {/* TODO replace with a pretty GIF */}
-            <Header>Lorem ipsum</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
-            <Header>Dolor sit amet</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
+            <Header>Tech Stack</Header>
+            <StackImage src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png" alt="Docker"/>
+            <StackImage src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Node.js"/>
+            <StackImage src="https://marmelab.com/images/blog/graphql/logo.png" alt="GraphQL"/>
+            <StackImage src="https://www.fullstackpython.com/img/logos/vuejs-wide.png" alt="Vue.js"/>
+            <StackImage src={elementLogo} alt="ElementUI"/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -65,38 +62,33 @@ const IndexPage = (props: LayoutProps) =>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              File Browser
             </Header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas eaque at quae cupiditate aspernatur quibusdam!
-                  Distinctio quod non, harum dolorum earum molestias,
-                  beatae expedita aliquam dolorem asperiores nemo amet quaerat.
-                </p>
+              View and upload files to your containers!
+              Our custom file-manager allows you to quickly adn easily upload files to each of your containers.
+              Our pattented file technology makes working with files a breeze.
+            </p>
           </Grid.Column>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              Built-in Editor
             </Header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas eaque at quae cupiditate aspernatur quibusdam!
-                  Distinctio quod non, harum dolorum earum molestias,
-                  beatae expedita aliquam dolorem asperiores nemo amet quaerat.
-                </p>
+              Kite implements the Monaco Editor, the same editor that powers <a href="https://code.visualstudio.com/">VS Code</a>,
+              so that you can quickly edit your code in an environment that you are already friendly with!
+            </p>
           </Grid.Column>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              Container Management
             </Header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas eaque at quae cupiditate aspernatur quibusdam!
-                  Distinctio quod non, harum dolorum earum molestias,
-                  beatae expedita aliquam dolorem asperiores nemo amet quaerat.
-                </p>
+              Kite let's your users create containers based on a predefined array of images that <i>you</i> decide, this allows you to have
+              complete control of the kinds of projects they can build.
+            </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
