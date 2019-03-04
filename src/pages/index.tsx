@@ -61,7 +61,7 @@ const IndexPage = (props: LayoutProps) =>
         <Grid.Row>
           <Grid.Column>
             <Header icon>
-              <Icon name="wizard"></Icon>
+              <Icon name="file code outline"></Icon>
               File Browser
             </Header>
             <p>
@@ -72,7 +72,7 @@ const IndexPage = (props: LayoutProps) =>
           </Grid.Column>
           <Grid.Column>
             <Header icon>
-              <Icon name="wizard"></Icon>
+              <Icon name="text cursor"></Icon>
               Built-in Editor
             </Header>
             <p>
@@ -82,7 +82,7 @@ const IndexPage = (props: LayoutProps) =>
           </Grid.Column>
           <Grid.Column>
             <Header icon>
-              <Icon name="wizard"></Icon>
+              <Icon name="sitemap"></Icon>
               Container Management
             </Header>
             <p>
