@@ -1,0 +1,19 @@
+---
+title: {{title}}
+createdDate: "{{createdDate}}"
+updatedDate: "{{createdDate}}"
+author: {{author}}{{tags}}
+draft: {{draft}}
+---
+
+## This week
+
+
+
+## Next week
+
+
+
+## Roadblocks
+
+
