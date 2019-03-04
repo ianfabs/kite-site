@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `My website`,
+    title: `Kite`,
     googleVerification: `abcdefz`,
     disqus: `gatsby-typescript`
   },
@@ -66,8 +66,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby website`,
-        short_name: `Gatsby website`,
+        name: `Kite website`,
+        short_name: `Kite website`,
         start_url: `/`,
         background_color: `#f7f7f7`,
         theme_color: `#191919`,
