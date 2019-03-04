@@ -7,7 +7,6 @@ tags:
   - status_report
   -  status
   -  capstone
-image: welcoming.png
 draft: false
 ---
 
