@@ -24,6 +24,7 @@ const BlogPage = (props: BlogProps) => {
   const tags = props.data.tags.group;
   const posts = props.data.posts.edges;
   const { pathname } = props.location;
+  console.log(pathname);
   const pageCount = Math.ceil(props.data.posts.totalCount / 10);
 
   // TODO export posts in a proper component
@@ -32,7 +33,6 @@ const BlogPage = (props: BlogProps) => {
       {posts.map(({ node }: {node: MarkdownRemark}) => {
         const { frontmatter, timeToRead, fields: { slug }, excerpt } = node;
         const avatar = frontmatter.author.avatar.children[0] as ImageSharp;
-        const cover = get(frontmatter, "image.children.0.fixed", {});
 
         const extra = (
           <Comment.Group>
@@ -64,7 +64,6 @@ const BlogPage = (props: BlogProps) => {
         return (
           <Card key={slug}
             fluid
-            image={cover}
             header={frontmatter.title}
             extra={extra}
             description={description}
@@ -129,16 +128,6 @@ query PageBlog {
         frontmatter {
           title
           updatedDate(formatString: "DD MMMM, YYYY")
-          image {
-          	children {
-              ... on ImageSharp {
-                fixed(width: 700, height: 100) {
-                  src
-                  srcSet
-                }
-              }
-            }
-          }
           author {
             id
             avatar {

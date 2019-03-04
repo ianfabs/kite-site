@@ -26,7 +26,6 @@ const BlogPostPage = (props: BlogPostProps) => {
   const recents = props.data.recents.edges
     .map(({ node }) => {
       const recentAvatar = node.frontmatter.author.avatar.children[0] as ImageSharp;
-      const recentCover = get(node, "frontmatter.image.children.0.fixed", {});
       const extra = (
         <Comment.Group>
           <Comment>
@@ -50,7 +49,6 @@ const BlogPostPage = (props: BlogPostProps) => {
         <div key={node.fields.slug} style={{ paddingBottom: "1em" }}>
           <Card as={Link}
             to={node.fields.slug}
-            image={recentCover}
             header={node.frontmatter.title}
             extra={extra}
           />
@@ -143,16 +141,6 @@ export const pageQuery = graphql`
       }
       title
       updatedDate(formatString: "MMM D, YYYY")
-      image {
-        children {
-          ... on ImageSharp {
-            fixed(width: 900, height: 300, quality: 100) {
-              src
-              srcSet
-            }
-          }
-        }
-      }
     }
   }
   recents: allMarkdownRemark(
@@ -172,16 +160,6 @@ export const pageQuery = graphql`
         timeToRead
         frontmatter {
           title
-          image {
-            children {
-              ... on ImageSharp {
-                fixed(width: 300, height: 100) {
-                  src
-                  srcSet
-                }
-              }
-            }
-          }
           author {
             id
             avatar {
