@@ -9,10 +9,11 @@ import {
   Grid,
   Header,
   Icon,
+  List,
 } from "semantic-ui-react";
 import elementLogo from "../css/images/element.svg";
 
-const StackImage = (props:any) => <img src={props.src} alt={props.alt} width="auto" height="50vh" style={{margin: "13px 10px"}}/>
+const StackImage = (props: any) => <img src={props.src} alt={props.alt} width="auto" height="50vh" style={{margin: "13px 10px"}}/>;
 
 const IndexPage = (props: LayoutProps) =>
   <div>
@@ -24,7 +25,7 @@ const IndexPage = (props: LayoutProps) =>
       <Container text>
         <Header inverted as="h1">Kite</Header>
         <Header inverted as="h2">Developed with the needs of eduational institutions in mind</Header>
-        <Button primary size="huge" onClick={()=>{window.open("https://github.com/kari-labs/kite")}}>Get Started</Button>
+        <Button primary size="huge" onClick={() => {window.open("https://github.com/kari-labs/kite"); }}>Get Started</Button>
       </Container>
     </Segment>
 
@@ -88,6 +89,89 @@ const IndexPage = (props: LayoutProps) =>
             <p>
               Kite let's your users create containers based on a predefined array of images that <i>you</i> decide, this allows you to have
               complete control of the kinds of projects they can build.
+            </p>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+
+    {/* Team */}
+
+    <Segment vertical className="stripe alternate feature">
+      <Grid columns="4" textAlign="center" divided relaxed stackable className="container">
+        <Grid.Row>
+          <Grid.Column>
+            <Header icon>
+              <Icon name="user circle"/>
+              Kyle Gray
+            </Header>
+            <p>
+              <Header as="h4">Responsibilities</Header>
+              <List as="ul">
+                <List.Item as="li">
+                  Implementing GraphQl subscriptions
+                </List.Item>
+                <List.Item as="li">
+                  Creating and implementing the filesystem
+                </List.Item>
+                <List.Item as="li">
+                  Implementing Apollo server
+                </List.Item>
+              </List>
+            </p>
+          </Grid.Column>
+          <Grid.Column>
+            <Header icon>
+              <Icon name="user circle"/>
+              Ian Fabs
+            </Header>
+            <p>
+            <Header as="h4">Responsibilities</Header>
+              <List as="ul">
+                <List.Item as="li">
+                  Implementing the container-management system
+                </List.Item>
+                <List.Item as="li">
+                  Mainting the filesystem
+                </List.Item>
+                <List.Item as="li">
+                  Implementing Vue.js and Vue.js plugins correctly
+                </List.Item>
+              </List>
+            </p>
+          </Grid.Column>
+          <Grid.Column>
+            <Header icon>
+              <Icon name="user circle"/>
+              Kyle Riley
+            </Header>
+            <p>
+              <Header as="h4">Responsibilities</Header>
+              <List as="ul">
+                <List.Item as="li">
+                  Creating and implementing the administration system
+                </List.Item>
+              </List>
+            </p>
+          </Grid.Column>
+          <Grid.Column>
+            <Header icon>
+              <Icon name="user circle"/>
+              Matt Conway
+            </Header>
+            <p>
+              <Header as="h4">Responsibilities</Header>
+              <List as="ul">
+                <List.Item as="li">
+                  Creating and implementing the authentication system.
+                </List.Item>
+                <List.Item as="li">
+                  Implementing and maintainting Vuex
+                </List.Item>
+                <List.Item as="li">
+                  Implementing and maintainting Redis
+                </List.Item>
+              </List>
             </p>
           </Grid.Column>
         </Grid.Row>

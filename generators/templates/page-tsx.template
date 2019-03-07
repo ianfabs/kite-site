@@ -1,13 +1,15 @@
 import * as React from "react";
-import { Header, Icon, Grid } from "semantic-ui-react";
+import { Header, Icon, Container, Segment } from "semantic-ui-react";
+import {withLayout} from "../components/Layout";
 
-export default () =>
-  <Grid centered verticalAlign="middle">
-    <Grid.Column>
-      <Grid.Row>
+export default withLayout(
+  () =>
+  <Container centered>
+    <Segment verticle>
+      <Header as="h1">
         <Icon name="configure" size="huge"/>
-        <Header as="h1">{{pascalCase name}} page</Header>
-        <Header as="h2">Under construction</Header>
-      </Grid.Row>
-    </Grid.Column>
-  </Grid>;
+        <Header.Content>{{pascalCase name}}</Header.Content>
+      </Header>
+    </Segment>
+  </Container>
+);
