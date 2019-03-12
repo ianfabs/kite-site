@@ -24,7 +24,7 @@ const IndexPage = (props: LayoutProps) =>
       />
       <Container text>
         <Header inverted as="h1">Kite</Header>
-        <Header inverted as="h2">Developed with the needs of eduational institutions in mind</Header>
+        <Header inverted as="h2">Developed with the needs of educational institutions in mind</Header>
         <Button primary size="huge" onClick={() => {window.open("https://github.com/kari-labs/kite"); }}>Get Started</Button>
       </Container>
     </Segment>
@@ -41,7 +41,7 @@ const IndexPage = (props: LayoutProps) =>
             </p>
             <Header>Future-Forward</Header>
             <p>
-              Kite was designed with a next-gen technology stack, affording your instution the latest and greatest the tech world has to offer.
+              Kite was designed with a next-gen tech stack, affording your instution the latest and greatest the tech world has to offer.
             </p>
           </Grid.Column>
           <Grid.Column width="6" floated="right">
@@ -67,8 +67,8 @@ const IndexPage = (props: LayoutProps) =>
             </Header>
             <p>
               View and upload files to your containers!
-              Our custom file-manager allows you to quickly adn easily upload files to each of your containers.
-              Our pattented file technology makes working with files a breeze.
+              Our custom file-manager allows you to quickly and easily upload files to each of your containers.
+              Our file technology makes working with files a breeze.
             </p>
           </Grid.Column>
           <Grid.Column>
@@ -109,7 +109,7 @@ const IndexPage = (props: LayoutProps) =>
               <Header as="h4">Responsibilities</Header>
               <List as="ul">
                 <List.Item as="li">
-                  Implementing GraphQl subscriptions
+                  Implementing GraphQL subscriptions
                 </List.Item>
                 <List.Item as="li">
                   Creating and implementing the filesystem
@@ -132,7 +132,7 @@ const IndexPage = (props: LayoutProps) =>
                   Implementing the container-management system
                 </List.Item>
                 <List.Item as="li">
-                  Mainting the filesystem
+                  Maintaining the filesystem
                 </List.Item>
                 <List.Item as="li">
                   Implementing Vue.js and Vue.js plugins correctly
@@ -166,10 +166,10 @@ const IndexPage = (props: LayoutProps) =>
                   Creating and implementing the authentication system.
                 </List.Item>
                 <List.Item as="li">
-                  Implementing and maintainting Vuex
+                  Implementing and maintaining Vuex
                 </List.Item>
                 <List.Item as="li">
-                  Implementing and maintainting Redis
+                  Implementing and maintaining Redis
                 </List.Item>
               </List>
             </p>
